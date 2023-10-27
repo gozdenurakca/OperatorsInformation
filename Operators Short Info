@@ -1,0 +1,99 @@
+using System;
+
+namespace operatorler
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+
+            Console.WriteLine("Atama ve Islemli Atama Operatorleri");
+            //Atama ve işlemli atama
+            int x = 3;
+            Console.WriteLine("x'in ilk degeri= " +x);
+            int y = 2;
+            Console.WriteLine("y'nin ilk degeri= " +y);
+            y += 2; // y = y + 2 demektir.
+            Console.WriteLine("y'nin yeni degeri= " + y);
+            y /= 2;
+            Console.WriteLine("y'nin yeni degeri= " +y);
+            x *= 2; // x = x*2 demektir.
+            Console.WriteLine("x'in yeni degeri = " + x);
+
+
+            Console.WriteLine("Mantiksal Operatorler");
+            // Mantıksal Operatörler
+            // ||, &&, !
+            bool isSuccess = true;
+            bool isCompleted = false;
+
+            if(isSuccess && isCompleted) // &&(ve) yi kullanırsak her iki durumunda true olmasını bekler
+            // Perfect olarak terminale yazdırmadı çünkü ve operatöründe bir tane false var ise sonuç false olur.
+            // true ve false == false
+            {
+                Console.WriteLine("Perfect!");
+            }
+            
+            if(isSuccess || isCompleted) // ||(veya) yi kullanırsak bir durum true ise sonuç true olur
+            // true veya false == true
+            {
+                Console.WriteLine("Great!");
+            }
+            
+            if(isSuccess || !isCompleted) // ||(veya) yi kullanırsak bir durum true ise sonuç true olur ve burada "!" işareti 
+            // isCompleted'in değili yani false'un değili true'dir.
+            // true veya true == true
+            {
+                Console.WriteLine("Fine!");
+            }
+
+            Console.WriteLine("Iliskisel Operatorler");
+            // İlişkisel Operatörler
+            // <, >, >=, <= , ==, !=
+            int a = 3;
+            int b= 4;
+            bool sonuc = a < b;
+            Console.WriteLine(sonuc);
+            sonuc = a > b;
+            Console.WriteLine(sonuc);
+            sonuc = a >= b;
+            Console.WriteLine(sonuc);
+            sonuc = a <= b;
+            Console.WriteLine(sonuc);
+            sonuc = a != b;
+            Console.WriteLine(sonuc);
+
+            Console.WriteLine("Aritmetik Operatorler");
+            // *, /, +, -
+            int sayi1 = 10;
+            int sayi2 = 5;
+
+            int sonuc1= sayi1 / sayi2;
+            Console.WriteLine(sonuc1);
+
+            sonuc1= sayi1*sayi2;
+            Console.WriteLine(sonuc1);
+
+            sonuc1= sayi1+sayi2;
+            Console.WriteLine(sonuc1);
+
+            sonuc1= sayi1-sayi2;
+            Console.WriteLine(sonuc1);
+
+            sayi1 += 5;
+            Console.WriteLine(sayi1);
+
+            sonuc1= sayi1*sayi2;
+            Console.WriteLine(sonuc1);
+
+            // % mod almak demektir == böldükten sonra kalanı getirir.
+            int sonuc2 = 20 % 3;
+            Console.WriteLine(sonuc2); // 2
+
+            sonuc2 = sayi1 % 4;
+            Console.WriteLine(sonuc2); // 3
+
+
+        }
+    }
+}
